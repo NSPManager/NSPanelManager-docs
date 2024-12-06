@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'NSPManager',
-  projectName: 'NSPanelManager',
+  projectName: 'NSPanelManager-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,8 +45,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            // TODO: change branch back to `main` after merge of beta branch
-            'https://github.com/NSPManager/NSPanelManager/edit/beta/docs',
+            'https://github.com/NSPManager/NSPanelManager-docs/edit/main/docs',
         },
         theme: {
           customCss: './src/css/custom.css',
