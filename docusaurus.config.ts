@@ -45,7 +45,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/NSPManager/NSPanelManager-docs/edit/main/docs',
+            'https://github.com/NSPManager/NSPanelManager-docs/edit/main',
         },
         theme: {
           customCss: './src/css/custom.css',
