@@ -10,7 +10,7 @@ import CenteredImage from '@site/src/components/CenteredImage';
 
 For docker users, simply connect to: `http://your-server-ip:8000`
 
-For Home Assistant users having installed the [Home Assistant Add-on](./install/installation-guide-home-assistant), TODO: document
+For Home Assistant users having installed the [Home Assistant Add-on](./install/installation-guide-home-assistant), simply connect tp: `http://<your-home-assistant-address>:8000`
 
 ## Initial setup
 
