@@ -1,6 +1,6 @@
-# Documentation
+# NSPanelManager Documentation
 
-This documentation website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+The documentation website [nspanelmanager.com](https://nspanelmanager.com) is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 
@@ -27,4 +27,6 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Deployment is automated by `.github/workflows/deploy-doc.yml` to GitHub pages.
+Deployment is automated by `.github/workflows/deploy.yml` to GitHub pages as soon as a PR is merged 
+on `main` branch.
+
