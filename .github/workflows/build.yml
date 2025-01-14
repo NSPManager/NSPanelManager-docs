@@ -17,4 +17,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build documentation website
         # Check URLs are valid, path to images, etc.
-        run: cd docs && yarn build
+        run: yarn build
