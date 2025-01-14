@@ -1,8 +1,14 @@
+name: Build and check
+
 on:
   pull_request:
 
 permissions:
   contents: read
+
+concurrency:
+  group: 'build-doc-${{ github.ref }}'  # This ensures concurrency for the same branch or PR
+  cancel-in-progress: true  # This cancels any in-progress execution when a new commit is done on the same branch
 
 jobs:
   build-doc:
@@ -17,4 +23,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build documentation website
         # Check URLs are valid, path to images, etc.
-        run: cd docs && yarn build
+        run: yarn build
