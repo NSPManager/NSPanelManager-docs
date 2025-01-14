@@ -1,0 +1,38 @@
+# When a PR get labelled "preview", deploy a web rendering of the changes via pushpreview
+name: PushPreview
+
+on:
+  pull_request_target:
+    types:
+      - labeled
+
+jobs:
+  preview:
+    runs-on: ubuntu-24.04
+    if: github.event.label.name == 'preview'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Comment
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --body "⚙️ Hang tight! PushPreview is currently building your preview. We'll share the URL as soon as it's ready."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: 18
+
+      - name: Set BASE_URL
+        run: echo "BASE_URL=/github/${{ github.repository }}/${{ github.event.number }}/" >> $GITHUB_ENV
+
+      - name: Build site
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Generate preview
+        uses: TechDocsStudio/pushpreview-action@cf958f7be2bf55d3f56d351bb9abf56b4c6b9a50 # 1.0.6
+        with:
+          source-directory: ./build
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pushpreview-token: ${{ secrets.PUSHPREVIEW_TOKEN }}
