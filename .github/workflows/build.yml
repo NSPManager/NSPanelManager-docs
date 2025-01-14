@@ -4,6 +4,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: 'build-doc-${{ github.ref }}'  # This ensures concurrency for the same branch or PR
+  cancel-in-progress: true  # This cancels any in-progress execution when a new commit is done on the same branch
+
 jobs:
   build-doc:
     name: Build documentation
