@@ -1,3 +1,5 @@
+name: Build and check
+
 on:
   pull_request:
 
