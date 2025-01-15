@@ -131,6 +131,10 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/NSPManager/NSPanelManager',
             },
+            {
+              label: 'Branding',
+              to: '/branding/logo-guidelines',
+            },
           ],
         },
       ],
