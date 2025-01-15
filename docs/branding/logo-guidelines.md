@@ -30,12 +30,12 @@ Whenever possible, use the vectorized (SVG) versions for optimal quality.
 | <CenteredImage src="/images/branding/logos/nspm-logo-black-no-bg.svg" alt="Black logo transparent" />               | `https://nspanelmanager.com/images/branding/logos/nspm-logo-black-no-bg.svg`    | Yes        | svg    | Transparent | -    |
 | <CenteredImage src="/images/branding/logos/nspm-logo-white-no-bg.svg" alt="White logo transparent" />               | `https://nspanelmanager.com/images/branding/logos/nspm-logo-white-no-bg.svg`    | Yes        | svg    | Transparent | -    |
 | <CenteredImage src="/images/branding/logos/nspm-logo-white-black-bg.svg" alt="White logo with black background" />  | `https://nspanelmanager.com/images/branding/logos/nspm-logo-white-black-bg.svg` | Yes        | svg    | Solid       | -    |
-| <CenteredImage src="/images/branding/logos/nspm-logo-black-white-bg.svg" alt="Black logo whith white background" /> | `https://nspanelmanager.com/images/nspm-logo-black-white-bg.svg`                | Yes        | svg    | Solid       | -    |
+| <CenteredImage src="/images/branding/logos/nspm-logo-black-white-bg.svg" alt="Black logo whith white background" /> | `https://nspanelmanager.com/images/branding/logos/nspm-logo-black-white-bg.svg` | Yes        | svg    | Solid       | -    |
 
 ## Square Logos
 
-| Logo                                                                                           | Permalink                                                          | Vectorized | Format | Background | Size       |
-|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|------------|--------|------------|------------|
-| <CenteredImage src="/images/branding/logos/nspm-icon.svg" alt="Vectorized square icon" />      | `https://nspanelmanager.com/images/branding/nspm-icon.svg`         | Yes        | svg    | Solid      | -          |
-| <CenteredImage src="/images/branding/logos/nspm-icon-128x128.png" alt="Icon 128x128 pixels" /> | `https://nspanelmanager.com/images/branding/nspm-icon-128x128.png` | No         | png    | Solid      | 128x128 px |
-| <CenteredImage src="/images/branding/logos/nspm-icon-32x32.ico" alt="Icon 32x32 pixels" />     | `https://nspanelmanager.com/images/branding/nspm-icon-32x32.ico`   | No         | ico    | Solid      | 32x32 px   |
+| Logo                                                                                           | Permalink                                                                | Vectorized | Format | Background | Size       |
+|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------|--------|------------|------------|
+| <CenteredImage src="/images/branding/logos/nspm-icon.svg" alt="Vectorized square icon" />      | `https://nspanelmanager.com/images/branding/logos/nspm-icon.svg`         | Yes        | svg    | Solid      | -          |
+| <CenteredImage src="/images/branding/logos/nspm-icon-128x128.png" alt="Icon 128x128 pixels" /> | `https://nspanelmanager.com/images/branding/logos/nspm-icon-128x128.png` | No         | png    | Solid      | 128x128 px |
+| <CenteredImage src="/images/branding/logos/nspm-icon-32x32.ico" alt="Icon 32x32 pixels" />     | `https://nspanelmanager.com/images/branding/logos/nspm-icon-32x32.ico`   | No         | ico    | Solid      | 32x32 px   |
