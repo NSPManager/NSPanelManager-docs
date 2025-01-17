@@ -8,6 +8,8 @@ import CenteredImage from '@site/src/components/CenteredImage';
 
 ## Main page
 
+### test
+
 <CenteredImage src="/images/doc/main_page_numbers.png" alt="Main page" figureNumber="9" />
 
 1. Ceiling Lights button
