@@ -159,6 +159,7 @@ Then, flash the firmware with your tool of choice:
 After the flash of the firmware, you will not see any visible change on the NSPanel display this is normal at this stage.
 :::
 
+You are now ready to (configure your flashed Sonoff NSPanel)[./configure-flashed-nspanel.md].
 
 
 
