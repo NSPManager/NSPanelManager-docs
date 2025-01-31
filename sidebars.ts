@@ -21,6 +21,7 @@ const sidebars: SidebarsConfig = {
             'getting-started/pre-requisites',
             'getting-started/supported-devices',
             'getting-started/flash-nspanel',
+            'getting-started/configure-flashed-nspanel',
             {
               type: 'category',
               label: 'Install NSPanel Manager',
