@@ -128,7 +128,7 @@ If a light was added after a scene was saved, that light is not affected by that
 Global scenes that apply to all rooms are available in the "Entities" -> "Global scenes" menu.
 :::
 
-### Lights <Label vablue="stable" \>
+### Lights <Label value="stable"/>
 
 To add a new light, simply press the "Add new light"-button. When doing so, a list of all lights and switches gathered from
 Home Assistant and OpenHAB will be shown. Simply search or scroll to find the desired light and press it.
@@ -148,7 +148,7 @@ If you are adding an OpenHAB light or switch, things aren’t as simple, unfortu
 There is really no way around this and as such the user has to chose all the same settings as for Home Assistant but
 also has to select the appropriate OpenHAB items that corresponds to each capability of the light.
 
-### Individual light control <Label vablue="stable" \>
+### Individual light control <Label value="stable"/>
 
 There is place for up to 12 lights (per room) to be controlled individually from the NSPanel. The image on the bottom
 shows a preview on how this might look. When a new light is added to the room it will automatically be assigned to the
@@ -160,7 +160,7 @@ to the room.
 Each entity may only be assigned to one slot. If the list of entities is empty then all entities has been assigned a slot.
 :::
 
-### Entities <Label vablue="beta" \>
+### Entities <Label value="beta"/>
 
 To add a new entity, simply press the "+"-icon in a free slot on a page and select type.
 If you have both Home Assistant and OpenHAB configured you will be given the option to select from what manager the entity is controlled by.
@@ -176,9 +176,9 @@ When adding/editing a light entity you get multiple options of charecteristics o
 - **Controlled by main page** - If this is marked the light will be included in the displayed data and controlled from the main page of the NSPanel.
   This can be uncheck to still have a given light controllable from the panel but not be changed when changing values on the main page.
 - **Capabilities** - Can this light handle color temperature and/or color.
-- **Brightness item <Label value="openhab" \>** - Select the OpenHAB item to control the brightness of the light.
-- **Color temperature item <Label value="openhab" \>** - Select the OpenHAB item to control the color temperature of the light.
-- **RGB item <Label value="openhab" \>** - Select the OpenHAB item to control the color of the light.
+- **Brightness item <Label value="openhab"/>** - Select the OpenHAB item to control the brightness of the light.
+- **Color temperature item <Label value="openhab"/>** - Select the OpenHAB item to control the color temperature of the light.
+- **RGB item <Label value="openhab"/>** - Select the OpenHAB item to control the color of the light.
 
 <CenteredImage src="/images/doc/configure_home_assistant_light.png" alt="Add/Edit light Home Assistant" figureNumber="7a" />
 <CenteredImage src="/images/doc/configure_openhab_light.png" alt="Add/Edit light OpenHAB" figureNumber="7b" />
