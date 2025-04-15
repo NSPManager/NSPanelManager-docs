@@ -86,8 +86,8 @@ Available options for each individual NSPanel are:
   - **Show without background (no weather)** - Show the screensaver with a black background but only time and
     date.
   - **No screensaver (turn off screen)** - Make the screen completely black when not in use.
-- **Screensaver inside temperature** - <Label value="beta" \>Show or hide inside temperature on screensaver.
-- **Screensaver outside temperature** - <Label value="beta" \>Show or hide outside temperature on screensaver. Only available on screensaver page without weather.
+- **Screensaver inside temperature** - <Label value="beta"/>Show or hide inside temperature on screensaver.
+- **Screensaver outside temperature** - <Label value="beta"/>Show or hide outside temperature on screensaver. Only available on screensaver page without weather.
 - **Temperature calibration** - Calibrate the internal temperature sensor. Enter a negative value to bring the reported
   temperature down and vice versa.
 
@@ -98,7 +98,7 @@ rooms, please read this chapter for a full understanding on how to work with roo
 
 <CenteredImage src="/images/doc/room_page.png" alt="Room page" figureNumber={4} />
 
-### <Label value="beta" \>Pages
+### <Label value="beta"/>Pages
 
 Both scenes and entities are handled within "Pages". These pages as simply to use and will hold all your scenes and entities. Because the Nextion display used on the
 Sonoff NSPanel is somewhat limiting there are only predefined pages available. Pages are available in variants to displya 4, 8 or 12 entities as displayed below.
@@ -289,13 +289,13 @@ The following options are available:
   - **Show without background (no weather)** - Show the screensaver with a black background but only time and
     date.
   - **No screensaver (turn off screen)** - Make the screen completely black when not in use.
-- **Screensaver inside temperature <Label value="beta" \>** - Should the inside temperature be displayed on the NSPanel.
-- **Screensaver outside temperature <Label value="beta" \>** - Should the outside temperature be displayed on the NSPanel. Only available for screensaver pages without weather.
+- **Screensaver inside temperature <Label value="beta"/>** - Should the inside temperature be displayed on the NSPanel.
+- **Screensaver outside temperature <Label value="beta"/>** - Should the outside temperature be displayed on the NSPanel. Only available for screensaver pages without weather.
 - **MQTT ignore time (ms)** - Time to wait (in milliseconds) after sending a command over MQTT before allowing
   new values to update the screen. This can be raised or lowered to minimize flickering of sliders on the NSPanel.
-- **Optistmic mode <Label value="beta" \>** - Replaces "MQTT Ignore time (ms)". When sending a command to set the state of a light or other entity, should we wait for a callback from Home Assistant or OpenHAB that a light has changed before updating the value on the NSPanel (Wait mode) or should we simply be optistmic and assume the values we sent will be set and immideatly update the displayed values on the NSPanel (optistmic mode).
-- **"All rooms" status backoff time (ms) <Label value="beta" \>** - When a room changes state, how long should the manager wait before recalculating the new state for "All rooms" view/mode on the NSPanel (in milliseconds).
-- **"Default light turn on brightess <Label value="beta" \>** - When a light has a brightness of 0 and the manager tries to turn it on it will default to this value.
+- **Optistmic mode <Label value="beta"/>** - Replaces "MQTT Ignore time (ms)". When sending a command to set the state of a light or other entity, should we wait for a callback from Home Assistant or OpenHAB that a light has changed before updating the value on the NSPanel (Wait mode) or should we simply be optistmic and assume the values we sent will be set and immideatly update the displayed values on the NSPanel (optistmic mode).
+- **"All rooms" status backoff time (ms) <Label value="beta"/>** - When a room changes state, how long should the manager wait before recalculating the new state for "All rooms" view/mode on the NSPanel (in milliseconds).
+- **"Default light turn on brightess <Label value="beta"/>** - When a light has a brightness of 0 and the manager tries to turn it on it will default to this value.
 
 ### MQTT
 

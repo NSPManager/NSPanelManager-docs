@@ -6,7 +6,7 @@ sidebar_position: 10
 import Centered from '@site/src/components/Centered';
 import Label from '@site/src/components/Label';
 
-# MQTT Topics <Label value="stable" \>
+# MQTT Topics <Label value="stable"/>
 
 Below table is a description of all MQTT topics that might be of use by a user. Replace `<panel_name>` with the friendly
 name of your NSPanel:
@@ -37,7 +37,7 @@ There are more topics that are used internally, these are:
 | nspanel/\<panel_name\>/command                        | JSON                       | JSON payload with a command for the panel to execute.                                                   |
 | nspanel/mqttmanager/command                           | JSON                       | JSON payload from panel with a command for MQTTManager to perform.                                      |
 
-# MQTT Topics <Label value="beta" \>
+# MQTT Topics <Label value="beta"/>
 
 Below table is a description of all MQTT topics that might be of use by a user. Replace `<mac>` with the MAC-address of your NSPanel:
 

@@ -70,14 +70,14 @@ Home Assistant and OpenHAB can leverage the MQTT integration through "Home Assis
 OpenHAB can also use) to auto-discover NSPanels and automatically register entities for panel temperature reading, panel
 relays, screen state and so on.
 
-### NSPanel Manager container to/from NSPanels <Label value="stable" \>
+### NSPanel Manager container to/from NSPanels <Label value="stable"/>
 
 The configuration of lights, scenes and so on does not reside on each panel. The panel only has locally the bare minimum
 configuration for setup. When the panel starts and has connected to WiFi it will do a HTTP GET request to the NSPanel
 Manager container in order to receive all configuration of entities, screen brightness and really, all settings
 available in the NSPanel Manager web interface.
 
-### NSPanel Manager container to/from NSPanels <Label value="beta" \>
+### NSPanel Manager container to/from NSPanels <Label value="beta"/>
 
 The configuration of lights, scenes and so on does not reside on each panel. The panel only has locally the bare minimum
 configuration for setup. When the panel starts and has connected to MQTT it will get the data needed to operate via MQTT messages
