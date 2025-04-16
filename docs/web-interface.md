@@ -104,6 +104,8 @@ Both scenes and entities are handled within "Pages". These pages as simply to us
 Sonoff NSPanel is somewhat limiting there are only predefined pages available. Pages are available in variants to displya 4, 8 or 12 entities as displayed below.
 It's possible to change the type of an existing page by pressing the pen-icon in the bottom right of the page. To reorder pages simply drag and drop them by the hand-icon in the bottom center of the page you wish to move. If you have more than one page avaiable it's also possible to delete a page with all the entities by pressing the cross in the bottom right of the page.
 
+The entities/scenes that are assigned to each slot in the page can also be moved by draging and dropping them into available slots. If an entity/scene is dropped on a slot with an already assigned entity/slot the will swap places.
+
 <CenteredImage src="/images/doc/entities_page_variants.png" alt="Page variants" figureNumber={5} />
 
 ### Scenes
