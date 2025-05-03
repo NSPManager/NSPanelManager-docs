@@ -326,3 +326,24 @@ new firmware, data file and also .tft files.
 This menu is not something you will need to use unless instructed to.
 The items are used to upload new firmware, data files or .tft-files for testing.
 It is mainly used for development and debugging.
+
+### <Label value="beta"/>Choose between different backgrounds for the panel
+
+In 2.0 we introduce the possibility to choose between different .tft files resulting in different backgrounds on the NSPanel.
+There are 4 .tft files to choose from. In future releases this choice is going to be made in the settings for each panel but in 2.0 you have to upload the .tft files manually using the Upload menu.
+
+**2.0 Backgrounds** (US files have the same background as the EU.)
+<CenteredImage src="/images/doc/tft/tft1_eu.png" alt="TFT1" figureNumber="9" />
+<CenteredImage src="/images/doc/tft/tft2_eu.png" alt="TFT2" figureNumber="10" />
+<CenteredImage src="/images/doc/tft/tft3_eu.png" alt="TFT3" figureNumber="11" />
+<CenteredImage src="/images/doc/tft/tft4_eu.png" alt="TFT4" figureNumber="12" />
+
+**Upload new .tft file (change background on your panels)**
+1. Go [here](https://github.com/NSPManager/NSPanelManager/tree/beta/docker/web/nspanelmanager)
+2. Download the .tft file you want to use
+3. Go to your manager web interface and press Upload->Upload TFT file->choose the file you downloaded
+4. Press Setting on the panel you want to upload .tft to -> Update GUI
+5. Wait for the new .tft files to be uploaded
+
+
+
