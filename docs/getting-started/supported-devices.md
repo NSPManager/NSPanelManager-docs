@@ -46,5 +46,5 @@ More info on the [support page](/support)
 [aliexpress-link-2]: https://s.click.aliexpress.com/e/_oFSwCcp
 [aliexpress-link-3]: https://s.click.aliexpress.com/e/_oDojEDL
 [aliexpress-link-4]: https://s.click.aliexpress.com/e/_oBgD8ZT
-[amazon-link-1]: https://amzn.to/4d2sDa3
-[amazon-link-2]: https://amzn.to/4iJX6uz
+[amazon-link-1]: https://amzn.to/4knptQp
+[amazon-link-2]: https://amzn.to/4ks1qzS
