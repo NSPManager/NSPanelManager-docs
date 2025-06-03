@@ -1,6 +1,8 @@
 # NSPanelManager Documentation
+[![Check Links](https://github.com/NSPManager/NSPanelManager-docs/actions/workflows/links.yml/badge.svg)](https://github.com/NSPManager/NSPanelManager-docs/actions/workflows/links.yml)
 
 The documentation website [nspanelmanager.com](https://nspanelmanager.com) is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
 
 ### Installation
 
