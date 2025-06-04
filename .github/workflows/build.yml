@@ -22,5 +22,14 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build documentation website
-        # Check URLs are valid, path to images, etc.
+        # Check paths are valid, markdown, etc.
         run: yarn build
+      - name: Check links
+        # exceptions can be added in .lycheeignore file
+        id: lychee
+        uses: lycheeverse/lychee-action@82202e5e9c2f4ef1a55a3d02563e1cb6041e5332 # v2.4.1
+        with:
+          fail: true
+          failIfEmpty: true
+          jobSummary: true
+          args: build --root-dir=${{ github.workspace }}/build --verbose --no-progress --max-redirects=20
