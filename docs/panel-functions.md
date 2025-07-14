@@ -81,13 +81,13 @@ Settings icon with a roof on top leads to Global Scenes page.
 On most pages, a swipe down will go back to the previous page. When swiping down on the home page you will enter the Smart Home Control page. This page is a work in progress.
 Design and functionality is not finished or decided yet.
 
-#### Swipe left
+#### Swipe in from left
 
-On the page that shoes entities and scenes, a swipe left will go the to previous room.
+On the page that shows entities and scenes, a swipe in from the left will go the to previous room. Note that when swiping you have to do it on the top of the page where no entities exists. This will be resolved in a future update.
 
-#### Swipe right
+#### Swipe in from right
 
-On the page that shoes entities and scenes, a swipe right will go the to next room.
+On the page that shows entities and scenes, a swipe in from the right will go the to next room. Note that when swiping you have to do it on the top of the page where no entities exists. This will be resolved in a future update.
 
 ### Smart Home Control page
 
