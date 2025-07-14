@@ -8,7 +8,7 @@ import Label from '@site/src/components/Label';
 
 # STOMP Topics <Label value="beta"/>
 
-The web interface makes use of the STOMP protocol to communicate with the MQTTManager in the background. STOMP is being used over websocket and can be connected to via http://<manager_address>:<manager_port>/websocket/stomp. When a stomp connection has been established the following topics can be used:
+The web interface makes use of the STOMP protocol to communicate with the MQTTManager in the background. STOMP is being used over websocket and can be connected to via http://\<manager_address\>:\<manager_port\>/websocket/stomp. When a stomp connection has been established the following topics can be used:
 
 | Topic                               | Payload                                                                  | Description                                                                                                                                                                                                                                                                                                             |
 | ----------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
