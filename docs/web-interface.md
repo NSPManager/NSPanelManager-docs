@@ -38,7 +38,7 @@ handles all communication between different components of the NSPanel Manager so
 
 ## NSPanel page
 
-<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page" figureNumber={3} />
+<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page (beta)" figureNumber={3} />
 
 The NSPanel settings page is used to configure specific settings for each individual NSPanel.
 This includes things like NSPanel type (EU/US), the room it is installed in, name and so on.
@@ -53,6 +53,8 @@ Available options for each individual NSPanel are:
 
 - **Friendly name** - The name of the NSPanel.
 - **NSPanel type** - The type of NSPanel, either EU or US.
+- **NSPanel type & orientation** - <Label value="beta"/>The type of NSPanel, either EU or US and orientation.
+- **NSPanel preview** - <Label value="beta"/>This is a preview of the selected NSPanel type, orientation and selected background. Press the preview to change the background.
 - **Default room** - Select the default room for the NSPanel. This is the room that will be selected in the GUI after the
   NSPanel has booted and after the screensaver has been active. It is also possible to lock the NSPanel to the default
   room so that it can’t control entities in other rooms.
@@ -339,11 +341,9 @@ There are 4 .tft files to choose from. In future releases this choice is going t
 <CenteredImage src="/images/doc/tft/tft4_eu.png" alt="TFT4" figureNumber="12" />
 
 **Upload new .tft file (change background on your panels)**
+
 1. Go [here](https://github.com/NSPManager/NSPanelManager/tree/beta/docker/web/nspanelmanager)
 2. Download the .tft file you want to use
 3. Go to your manager web interface and press Upload->Upload TFT file->choose the file you downloaded
 4. Press Setting on the panel you want to upload .tft to -> Update GUI
 5. Wait for the new .tft files to be uploaded
-
-
-
