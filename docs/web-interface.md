@@ -38,7 +38,7 @@ handles all communication between different components of the NSPanel Manager so
 
 ## NSPanel page
 
-<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page" figureNumber={3} />
+<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page (beta)" figureNumber={3} />
 
 The NSPanel settings page is used to configure specific settings for each individual NSPanel.
 This includes things like NSPanel type (EU/US), the room it is installed in, name and so on.
@@ -53,6 +53,8 @@ Available options for each individual NSPanel are:
 
 - **Friendly name** - The name of the NSPanel.
 - **NSPanel type** - The type of NSPanel, either EU or US.
+- **NSPanel type & orientation** - <Label value="beta"/>The type of NSPanel, either EU or US and orientation.
+- **NSPanel preview** - <Label value="beta"/>This is a preview of the selected NSPanel type, orientation and selected background.
 - **Default room** - Select the default room for the NSPanel. This is the room that will be selected in the GUI after the
   NSPanel has booted and after the screensaver has been active. It is also possible to lock the NSPanel to the default
   room so that it can’t control entities in other rooms.
@@ -91,12 +93,24 @@ Available options for each individual NSPanel are:
 - **Temperature calibration** - Calibrate the internal temperature sensor. Enter a negative value to bring the reported
   temperature down and vice versa.
 
+### <Label value="beta"/>Choose between different backgrounds for the panel
+
+In 2.0 we introduce the possibility to choose between different GUI files resulting in different backgrounds on the NSPanel.
+There are 4 backgrounds to choose from. To select an image, simply press the middle of the NSPanel preview and a popup will appear. Press the background you want and scroll down and press save.
+When that's done you need to update the GUI on the panel and it should be up and running with your selected background.
+
+**Available Backgrounds** (US files have the same background as the EU.)
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI1" figureNumber={4} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI2" figureNumber={5} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI3" figureNumber={6} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI4" figureNumber={7}  />
+
 ## Room page
 
 This section will describe how to manage rooms. Most of the configuration done with NSPanel Manager will be done in
 rooms, please read this chapter for a full understanding on how to work with rooms.
 
-<CenteredImage src="/images/doc/room_page.png" alt="Room page" figureNumber={4} />
+<CenteredImage src="/images/doc/room_page.png" alt="Room page" figureNumber={8} />
 
 ### <Label value="beta"/>Pages
 
@@ -106,7 +120,7 @@ It's possible to change the type of an existing page by pressing the pen-icon in
 
 The entities/scenes that are assigned to each slot in the page can also be moved by draging and dropping them into available slots. If an entity/scene is dropped on a slot with an already assigned entity/slot the will swap places.
 
-<CenteredImage src="/images/doc/entities_page_variants.png" alt="Page variants" figureNumber={5} />
+<CenteredImage src="/images/doc/entities_page_variants.png" alt="Page variants" figureNumber={9} />
 
 ### Scenes
 
@@ -135,13 +149,13 @@ Global scenes that apply to all rooms are available in the "Entities" -> "Global
 To add a new light, simply press the "Add new light"-button. When doing so, a list of all lights and switches gathered from
 Home Assistant and OpenHAB will be shown. Simply search or scroll to find the desired light and press it.
 
-<CenteredImage src="/images/doc/add_new_light.png" alt="Adding a new light to a room" figureNumber={5} />
+<CenteredImage src="/images/doc/add_new_light.png" alt="Adding a new light to a room" figureNumber={10} />
 
 When done, a new screen will show up and depending on if the selected entity was from Home Assistant or OpenHAB
 difference options will be shown.
 
-<CenteredImage src="/images/doc/edit_new_light_ha.png" alt="Add/Edit light Home Assistant" figureNumber="6a" />
-<CenteredImage src="/images/doc/edit_new_light_openhab.png" alt="Add/Edit light OpenHAB" figureNumber="6b" />
+<CenteredImage src="/images/doc/edit_new_light_ha.png" alt="Add/Edit light Home Assistant" figureNumber="11a" />
+<CenteredImage src="/images/doc/edit_new_light_openhab.png" alt="Add/Edit light OpenHAB" figureNumber="11b" />
 
 When adding a Home Assistant entity, simply set a friendly name for it, select the type (Ceiling or Table light),
 select if it’s a switch or dimmable light and what other capabilities it has.
@@ -182,8 +196,8 @@ When adding/editing a light entity you get multiple options of charecteristics o
 - **Color temperature item <Label value="openhab"/>** - Select the OpenHAB item to control the color temperature of the light.
 - **RGB item <Label value="openhab"/>** - Select the OpenHAB item to control the color of the light.
 
-<CenteredImage src="/images/doc/configure_home_assistant_light.png" alt="Add/Edit light Home Assistant" figureNumber="7a" />
-<CenteredImage src="/images/doc/configure_openhab_light.png" alt="Add/Edit light OpenHAB" figureNumber="7b" />
+<CenteredImage src="/images/doc/configure_home_assistant_light.png" alt="Add/Edit light Home Assistant" figureNumber="12a" />
+<CenteredImage src="/images/doc/configure_openhab_light.png" alt="Add/Edit light OpenHAB" figureNumber="12b" />
 
 ### Switch
 
@@ -196,7 +210,7 @@ all the relays in the group transissions to the new state.
 
 ## Weather and Time
 
-<CenteredImage src="/images/doc/weather_and_time.png" alt="Weather and Time settings" figureNumber="7" />
+<CenteredImage src="/images/doc/weather_and_time.png" alt="Weather and Time settings" figureNumber="13" />
 
 On the Weather & Time page settings related to time, date and weather can be changed. Date format is configured
 according to the `strftime` function and a link to available formatting options is available in the information box or [here](https://cplusplus.com/reference/ctime/strftime/).
@@ -239,7 +253,7 @@ and so on.
 
 Go ahead and explore by yourself.
 
-<CenteredImage src="/images/doc/settings_page.png" alt="Global settings" figureNumber="8" />
+<CenteredImage src="/images/doc/settings_page.png" alt="Global settings" figureNumber="14" />
 
 The "Global settings" section of the web interface is where you can settings that apply to all NSPanels or settings
 that simply are not directly related the panels themselves.
@@ -324,26 +338,5 @@ You may have noticed that there is an "Upload" menu in the top menu bar. Below w
 new firmware, data file and also .tft files.
 
 This menu is not something you will need to use unless instructed to.
-The items are used to upload new firmware, data files or .tft-files for testing.
+The items are used to upload new firmware, data files or GUI files for testing.
 It is mainly used for development and debugging.
-
-### <Label value="beta"/>Choose between different backgrounds for the panel
-
-In 2.0 we introduce the possibility to choose between different .tft files resulting in different backgrounds on the NSPanel.
-There are 4 .tft files to choose from. In future releases this choice is going to be made in the settings for each panel but in 2.0 you have to upload the .tft files manually using the Upload menu.
-
-**2.0 Backgrounds** (US files have the same background as the EU.)
-<CenteredImage src="/images/doc/tft/tft1_eu.png" alt="TFT1" figureNumber="9" />
-<CenteredImage src="/images/doc/tft/tft2_eu.png" alt="TFT2" figureNumber="10" />
-<CenteredImage src="/images/doc/tft/tft3_eu.png" alt="TFT3" figureNumber="11" />
-<CenteredImage src="/images/doc/tft/tft4_eu.png" alt="TFT4" figureNumber="12" />
-
-**Upload new .tft file (change background on your panels)**
-1. Go [here](https://github.com/NSPManager/NSPanelManager/tree/beta/docker/web/nspanelmanager)
-2. Download the .tft file you want to use
-3. Go to your manager web interface and press Upload->Upload TFT file->choose the file you downloaded
-4. Press Setting on the panel you want to upload .tft to -> Update GUI
-5. Wait for the new .tft files to be uploaded
-
-
-
