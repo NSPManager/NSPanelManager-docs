@@ -1,5 +1,5 @@
 ---
-title: Web interface
+title: Known issues
 sidebar_position: 5
 ---
 
