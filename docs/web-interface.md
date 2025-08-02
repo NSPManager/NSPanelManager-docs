@@ -66,8 +66,8 @@ Available options for each individual NSPanel are:
   All actions meant for relay 1 will be applied to relay 2 and vice versa.
 - **Left/Right Button mode** - Change the mode of a button. Available options are:
   - **Direct mode** - The buttons controls the relay directly. No WiFi is needed.
-  - **Detached mode** - Detached mode controls a button via you selected home automation platform.
-    This also exposes the option "Left/Right button controls light" where you select which entity it controls.
+  - **Detached mode** - Detached mode controls a light via your selected home automation platform.
+    This also exposes the option "Left/Right button controls light in room" as well as "Left/Right button controls light" where you select which entity it controls.
   - **Custom MQTT** - This mode can be used to send a custom message on a custom MQTT topic.
   - **Follow mode** - When the button is pressed the relay is engaged, when the button is release the relay is disconnected.
 - **Relay 1/2 default mode** - Select the default mode of the relay when the NSPanel starts.
@@ -101,9 +101,9 @@ When that's done you need to update the GUI on the panel and it should be up and
 
 **Available Backgrounds** (US files have the same background as the EU.)
 <CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI1" figureNumber={4} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI2" figureNumber={5} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI3" figureNumber={6} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI4" figureNumber={7}  />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft2/example.png" alt="GUI2" figureNumber={5} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft3/example.png" alt="GUI3" figureNumber={6} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft4/example.png" alt="GUI4" figureNumber={7}  />
 
 ## Room page
 
@@ -114,11 +114,11 @@ rooms, please read this chapter for a full understanding on how to work with roo
 
 ### <Label value="beta"/>Pages
 
-Both scenes and entities are handled within "Pages". These pages as simply to use and will hold all your scenes and entities. Because the Nextion display used on the
-Sonoff NSPanel is somewhat limiting there are only predefined pages available. Pages are available in variants to displya 4, 8 or 12 entities as displayed below.
+Both scenes and entities are handled within "Pages". These pages are simple to use and will hold all your scenes and entities. Because the Nextion display used on the
+Sonoff NSPanel is somewhat limiting there are only predefined pages available. Pages are available in variants to display 4, 8 or 12 entities as displayed below.
 It's possible to change the type of an existing page by pressing the pen-icon in the bottom right of the page. To reorder pages simply drag and drop them by the hand-icon in the bottom center of the page you wish to move. If you have more than one page avaiable it's also possible to delete a page with all the entities by pressing the cross in the bottom right of the page.
 
-The entities/scenes that are assigned to each slot in the page can also be moved by draging and dropping them into available slots. If an entity/scene is dropped on a slot with an already assigned entity/slot the will swap places.
+The entities/scenes that are assigned to each slot in the page can also be moved by draging and dropping them into available slots. If an entity/scene is dropped on a slot with an already assigned entity/slot they will swap places.
 
 <CenteredImage src="/images/doc/entities_page_variants.png" alt="Page variants" figureNumber={9} />
 
@@ -178,8 +178,7 @@ Each entity may only be assigned to one slot. If the list of entities is empty t
 
 ### Entities <Label value="beta"/>
 
-To add a new entity, simply press the "+"-icon in a free slot on a page and select type.
-If you have both Home Assistant and OpenHAB configured you will be given the option to select from what manager the entity is controlled by.
+To add a new entity, simply press the "+"-icon in a free slot on a page and select type. Once that's done you will need to select from which manager the entity is controlled by (Home Assistant, OpenHAB or NSPanel Manager internal entity).
 In the last step you can configure settings such as display name and any settings specific for that entity type.
 
 #### Configure lights
@@ -187,6 +186,7 @@ In the last step you can configure settings such as display name and any setting
 When adding/editing a light entity you get multiple options of charecteristics of the light.
 
 - **Name** - The displayed name on the NSPanel and web interface.
+- **Home Assistant Entity <Label value="home_assistant"/>** - The displayed name on the NSPanel and web interface.
 - **Type** - is this light a ceiling or table light (as to how it should be grouped/displayed on main page on NSPanel).
 - **Control mode** - Is this light dimmable or it it simply an on/off light.
 - **Controlled by main page** - If this is marked the light will be included in the displayed data and controlled from the main page of the NSPanel.
@@ -199,6 +199,35 @@ When adding/editing a light entity you get multiple options of charecteristics o
 <CenteredImage src="/images/doc/configure_home_assistant_light.png" alt="Add/Edit light Home Assistant" figureNumber="12a" />
 <CenteredImage src="/images/doc/configure_openhab_light.png" alt="Add/Edit light OpenHAB" figureNumber="12b" />
 
+#### Configure switches
+
+When adding/editing a switch entity you simply get to choose the entity/item and the name to use.
+
+- **Name** - The displayed name on the NSPanel and web interface.
+- **Home Assistant item <Label value="home_assistant"/>** - The home assistant entity to control.
+- **OpenHAB item <Label value="openhab"/>** - The OpenHAB item to control.
+
+<CenteredImage src="/images/doc/configure_home_assistant_switch.png" alt="Add/Edit switch Home Assistant" figureNumber="13a" />
+<CenteredImage src="/images/doc/configure_openhab_switch.png" alt="Add/Edit switch OpenHAB" figureNumber="13b" />
+#### Configure Home Assistant buttons
+
+When adding/editing a Home Assistant button entity you simply get the choice of what name to display and also what entity to use.
+
+- **Name** - The displayed name on the NSPanel and web interface.
+- **Home Assistant item** - This is the button entity in Home Assistant. This can be either an "button." or "input_button." entity.
+
+<CenteredImage src="/images/doc/configure_home_assistant_button.png" alt="Add/Edit button Home Assistant" figureNumber="14" />
+
+#### Configure NSPM buttons
+
+An NSPM button entity is controlled by the NSPanel Manager itself. This button entity is simply used to send an MQTT payload to a specified topic. What you do with it is up to you.
+
+- **Name** - The displayed name on the NSPanel and web interface.
+- **MQTT Topic** - The MQTT topic to send the payload to.
+- **MQTT Payload** - The MQTT payload to send.
+
+<CenteredImage src="/images/doc/configure_nspm_button.png" alt="Add/Edit button NSPM" figureNumber="15" />
+
 ### Switch
 
 It's possible to add relays/switches as controlled entities from the NSPanel. These are simply on/off and can be toggled from the "Entities page" on the NSPanel.
@@ -210,7 +239,7 @@ all the relays in the group transissions to the new state.
 
 ## Weather and Time
 
-<CenteredImage src="/images/doc/weather_and_time.png" alt="Weather and Time settings" figureNumber="13" />
+<CenteredImage src="/images/doc/weather_and_time.png" alt="Weather and Time settings" figureNumber="16" />
 
 On the Weather & Time page settings related to time, date and weather can be changed. Date format is configured
 according to the `strftime` function and a link to available formatting options is available in the information box or [here](https://cplusplus.com/reference/ctime/strftime/).
@@ -253,7 +282,7 @@ and so on.
 
 Go ahead and explore by yourself.
 
-<CenteredImage src="/images/doc/settings_page.png" alt="Global settings" figureNumber="14" />
+<CenteredImage src="/images/doc/settings_page.png" alt="Global settings" figureNumber="17" />
 
 The "Global settings" section of the web interface is where you can settings that apply to all NSPanels or settings
 that simply are not directly related the panels themselves.
