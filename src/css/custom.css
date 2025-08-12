@@ -25,6 +25,7 @@
   --ifm-color-primary-light: #2b5be3;
   --ifm-color-primary-lighter: #3663e4;
   --ifm-color-primary-lightest: #567ce8;
+  --ifm-hero-background-color: #303a57 !important;
   /*--ifm-background-color: #1f2937 !important;*/
   /*--ifm-background-surface-color: #172439;*/
 }
@@ -37,3 +38,10 @@
 /*nav[aria-label="Main"] {*/
 /*  background-color: #172439 !important;*/
 /*}*/
+
+.hero--primary {
+  --ifm-hero-background-color: #000000;
+}
+.heroBanner_qdFl {
+  padding: 20px 0 !important;
+}
