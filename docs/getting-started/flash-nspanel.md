@@ -102,7 +102,7 @@ Notice that RX and TX pins have to be inverted between the devices: it is not TX
 
 ### Flash NSPanel with NSPanelManager custom firmware
 
-First, download the latest firmware `merged-flash.bin` from [here](https://github.com/NSPManager/NSPanelManager/raw/refs/heads/main/firmware/NSPanelManagerFirmware/merged-flash.bin).
+First, download the latest firmware `merged-flash.bin` from [here](https://github.com/NSPManager/NSPanelManager/blob/main/docker/web/nspanelmanager/merged_flash.bin).
 
 Then, flash the firmware with your tool of choice:
 
