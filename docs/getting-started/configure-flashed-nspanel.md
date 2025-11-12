@@ -42,10 +42,10 @@ Let's setup the minimal configuration, the rest can be configured from NSPanel M
 After that the device will reboot and connect to your Wifi
 (it will no longer host a WiFi named `NSPMPanel` nor be reachable to the previous url).
 
-<Label value="beta" />In case you need to access the setup page again it is possible to reset the device by pressing the reset/reboot button via the bottom hole quickly 5 times in a row. This will start the WiFi access point again and let you configure it.
+In case you need to access the setup page again it is possible to reset the device by pressing the reset/reboot button via the bottom hole quickly 5 times in a row. This will start the WiFi access point again and let you configure it.
 
-If needed, you will still be able to connect to it via it's new IP from your own Wifi network.
-(Check in your Router to retrieve its IP)
+If needed, you will still be able to connect to it via it's new IP from your own Wifi network
+(check in your router to retrieve its new IP).
 
 At this stage, if your device could connect to your WiFi and to MQTT you can jump into
 the [installation of NSPanel Manager](./install/installation-guide-docker.md)

@@ -38,7 +38,7 @@ handles all communication between different components of the NSPanel Manager so
 
 ## NSPanel page
 
-<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page (beta)" figureNumber={3} />
+<CenteredImage src="/images/doc/nspanel_page.png" alt="NSPanel page" figureNumber={3} />
 
 The NSPanel settings page is used to configure specific settings for each individual NSPanel.
 This includes things like NSPanel type (EU/US), the room it is installed in, name and so on.
@@ -53,8 +53,8 @@ Available options for each individual NSPanel are:
 
 - **Friendly name** - The name of the NSPanel.
 - **NSPanel type** - The type of NSPanel, either EU or US.
-- **NSPanel type & orientation** - <Label value="beta"/>The type of NSPanel, either EU or US and orientation.
-- **NSPanel preview** - <Label value="beta"/>This is a preview of the selected NSPanel type, orientation and selected background.
+- **NSPanel type & orientation** - The type of NSPanel, either EU or US and orientation.
+- **NSPanel preview** - This is a preview of the selected NSPanel type, orientation and selected background.
 - **Default room** - Select the default room for the NSPanel. This is the room that will be selected in the GUI after the
   NSPanel has booted and after the screensaver has been active. It is also possible to lock the NSPanel to the default
   room so that it can’t control entities in other rooms.
@@ -88,22 +88,22 @@ Available options for each individual NSPanel are:
   - **Show without background (no weather)** - Show the screensaver with a black background but only time and
     date.
   - **No screensaver (turn off screen)** - Make the screen completely black when not in use.
-- **Screensaver inside temperature** - <Label value="beta"/>Show or hide inside temperature on screensaver.
-- **Screensaver outside temperature** - <Label value="beta"/>Show or hide outside temperature on screensaver. Only available on screensaver page without weather.
+- **Screensaver inside temperature** - Show or hide inside temperature on screensaver.
+- **Screensaver outside temperature** - Show or hide outside temperature on screensaver. Only available on screensaver page without weather.
 - **Temperature calibration** - Calibrate the internal temperature sensor. Enter a negative value to bring the reported
   temperature down and vice versa.
 
-### <Label value="beta"/>Choose between different backgrounds for the panel
+### Choose between different backgrounds for the panel
 
 In 2.0 we introduce the possibility to choose between different GUI files resulting in different backgrounds on the NSPanel.
 There are 4 backgrounds to choose from. To select an image, simply press the middle of the NSPanel preview and a popup will appear. Press the background you want and scroll down and press save.
 When that's done you need to update the GUI on the panel and it should be up and running with your selected background.
 
 **Available Backgrounds** (US files have the same background as the EU.)
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="GUI1" figureNumber={4} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft2/example.png" alt="GUI2" figureNumber={5} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft3/example.png" alt="GUI3" figureNumber={6} />
-<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft4/example.png" alt="GUI4" figureNumber={7}  />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft1/example.png" alt="Background 1" figureNumber={4} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft2/example.png" alt="Background 2" figureNumber={5} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft3/example.png" alt="Background 3" figureNumber={6} />
+<CenteredImage src="https://raw.githubusercontent.com/NSPManager/NSPanelManager/refs/heads/beta/docker/HMI_files/tft_automation/eu/output_tft4/example.png" alt="Background 4" figureNumber={7}  />
 
 ## Room page
 
@@ -112,7 +112,7 @@ rooms, please read this chapter for a full understanding on how to work with roo
 
 <CenteredImage src="/images/doc/room_page.png" alt="Room page" figureNumber={8} />
 
-### <Label value="beta"/>Pages
+### Pages
 
 Both scenes and entities are handled within "Pages". These pages are simple to use and will hold all your scenes and entities. Because the Nextion display used on the
 Sonoff NSPanel is somewhat limiting there are only predefined pages available. Pages are available in variants to display 4, 8 or 12 entities as displayed below.
@@ -144,39 +144,7 @@ If a light was added after a scene was saved, that light is not affected by that
 Global scenes that apply to all rooms are available in the "Entities" -> "Global scenes" menu.
 :::
 
-### Lights <Label value="stable"/>
-
-To add a new light, simply press the "Add new light"-button. When doing so, a list of all lights and switches gathered from
-Home Assistant and OpenHAB will be shown. Simply search or scroll to find the desired light and press it.
-
-<CenteredImage src="/images/doc/add_new_light.png" alt="Adding a new light to a room" figureNumber={10} />
-
-When done, a new screen will show up and depending on if the selected entity was from Home Assistant or OpenHAB
-difference options will be shown.
-
-<CenteredImage src="/images/doc/edit_new_light_ha.png" alt="Add/Edit light Home Assistant" figureNumber="11a" />
-<CenteredImage src="/images/doc/edit_new_light_openhab.png" alt="Add/Edit light OpenHAB" figureNumber="11b" />
-
-When adding a Home Assistant entity, simply set a friendly name for it, select the type (Ceiling or Table light),
-select if it’s a switch or dimmable light and what other capabilities it has.
-
-If you are adding an OpenHAB light or switch, things aren’t as simple, unfortunately.
-There is really no way around this and as such the user has to chose all the same settings as for Home Assistant but
-also has to select the appropriate OpenHAB items that corresponds to each capability of the light.
-
-### Individual light control <Label value="stable"/>
-
-There is place for up to 12 lights (per room) to be controlled individually from the NSPanel. The image on the bottom
-shows a preview on how this might look. When a new light is added to the room it will automatically be assigned to the
-next free slot on the page. By pressing a slot with an assigned entity you can chose to assign a new entity
-(if any entity is unassigned) or "clear" the slot which will remove the light from the page but it will still be attached
-to the room.
-
-:::tip
-Each entity may only be assigned to one slot. If the list of entities is empty then all entities has been assigned a slot.
-:::
-
-### Entities <Label value="beta"/>
+### Entities
 
 To add a new entity, simply press the "+"-icon in a free slot on a page and select type. Once that's done you will need to select from which manager the entity is controlled by (Home Assistant, OpenHAB or NSPanel Manager internal entity).
 In the last step you can configure settings such as display name and any settings specific for that entity type.
@@ -334,13 +302,13 @@ The following options are available:
   - **Show without background (no weather)** - Show the screensaver with a black background but only time and
     date.
   - **No screensaver (turn off screen)** - Make the screen completely black when not in use.
-- **Screensaver inside temperature <Label value="beta"/>** - Should the inside temperature be displayed on the NSPanel.
-- **Screensaver outside temperature <Label value="beta"/>** - Should the outside temperature be displayed on the NSPanel. Only available for screensaver pages without weather.
+- **Screensaver inside temperature** - Should the inside temperature be displayed on the NSPanel.
+- **Screensaver outside temperature** - Should the outside temperature be displayed on the NSPanel. Only available for screensaver pages without weather.
 - **MQTT ignore time (ms)** - Time to wait (in milliseconds) after sending a command over MQTT before allowing
   new values to update the screen. This can be raised or lowered to minimize flickering of sliders on the NSPanel.
-- **Optistmic mode <Label value="beta"/>** - Replaces "MQTT Ignore time (ms)". When sending a command to set the state of a light or other entity, should we wait for a callback from Home Assistant or OpenHAB that a light has changed before updating the value on the NSPanel (Wait mode) or should we simply be optistmic and assume the values we sent will be set and immideatly update the displayed values on the NSPanel (optistmic mode).
-- **"All rooms" status backoff time (ms) <Label value="beta"/>** - When a room changes state, how long should the manager wait before recalculating the new state for "All rooms" view/mode on the NSPanel (in milliseconds).
-- **"Default light turn on brightess <Label value="beta"/>** - When a light has a brightness of 0 and the manager tries to turn it on it will default to this value.
+- **Optistmic mode ** - Replaces "MQTT Ignore time (ms)". When sending a command to set the state of a light or other entity, should we wait for a callback from Home Assistant or OpenHAB that a light has changed before updating the value on the NSPanel (Wait mode) or should we simply be optistmic and assume the values we sent will be set and immideatly update the displayed values on the NSPanel (optistmic mode).
+- **"All rooms" status backoff time (ms)** - When a room changes state, how long should the manager wait before recalculating the new state for "All rooms" view/mode on the NSPanel (in milliseconds).
+- **"Default light turn on brightess** - When a light has a brightness of 0 and the manager tries to turn it on it will default to this value.
 
 ### MQTT
 
