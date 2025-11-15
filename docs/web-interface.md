@@ -234,23 +234,24 @@ An NSPM button entity is controlled by the NSPanel Manager itself. This button e
 
 When adding/editing a Homey light entity you get multiple options of characteristics of the light.
 
+- **Homey device <Label value="homey"/>** - The Homey device to control.
 - **Name** - The displayed name on the NSPanel and web interface.
-- **Homey item <Label value="homey"/>** - The Homey device to control.
 - **Type** - is this light a ceiling or table light (as to how it should be grouped/displayed on main page on NSPanel).
 - **Control mode** - Is this light dimmable or it it simply an on/off light.
 - **Controlled by main page** - If this is marked the light will be included in the displayed data and controlled from the main page of the NSPanel.
   This can be uncheck to still have a given light controllable from the panel but not be changed when changing values on the main page.
 - **Capabilities** - Can this light handle color temperature and/or color.
 
-<!-- TODO: Add Homey light configuration screenshot when available -->
-<!-- <CenteredImage src="/images/doc/configure_homey_light.png" alt="Add/Edit light Homey" figureNumber="16a" /> -->
+<CenteredImage src="/images/doc/select_homey_entity.png" alt="Select Source" figureNumber="16a" />
+
+<CenteredImage src="/images/doc/configure_homey_light.png" alt="Add/Edit light Homey" figureNumber="16b" />
 
 #### Configure Homey switches
 
 When adding/editing a Homey switch entity you simply get to choose the device and the name to use.
 
+- **Homey device <Label value="homey"/>** - The Homey device to control.
 - **Name** - The displayed name on the NSPanel and web interface.
-- **Homey item <Label value="homey"/>** - The Homey device to control.
 
 <!-- TODO: Add Homey switch configuration screenshot when available -->
 <!-- <CenteredImage src="/images/doc/configure_homey_switch.png" alt="Add/Edit switch Homey" figureNumber="16b" /> -->
@@ -259,8 +260,8 @@ When adding/editing a Homey switch entity you simply get to choose the device an
 
 When adding/editing a Homey button entity you can control devices with on/off capability.
 
+- **Homey device <Label value="homey"/>** - The Homey device with on/off capability.
 - **Name** - The displayed name on the NSPanel and web interface.
-- **Homey item <Label value="homey"/>** - The Homey device with on/off capability.
 
 <!-- TODO: Add Homey button configuration screenshot when available -->
 <!-- <CenteredImage src="/images/doc/configure_homey_button.png" alt="Add/Edit button Homey" figureNumber="16c" /> -->
