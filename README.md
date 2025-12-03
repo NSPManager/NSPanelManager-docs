@@ -12,6 +12,11 @@ $ yarn
 
 ### Local Development
 
+We recommend using [MISE](https://mise.jdx.dev/) for setting up a local development environment with proper versions of
+Node.js and Yarn.
+
+If you prefer to use a different tool, you can install Node.js and Yarn locally with the version specified in `mise.toml`.
+
 ```
 $ yarn start
 ```
