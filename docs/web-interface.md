@@ -124,8 +124,10 @@ The entities/scenes that are assigned to each slot in the page can also be moved
 
 ### Scenes
 
-You can choose to use scenes from Home Assistant or OpenHAB though these scenes will not be able to be saved on the fly.
+You can choose to use scenes from Home Assistant, OpenHAB, or Homey though these scenes will not be able to be saved on the fly.
 This is something that the NSPanel Manager scenes can perform internally but NSPanel Manager scenes will only manage states of lights.
+
+When using Homey, you can add Flows and Moods as scenes. Homey Flows will appear prefixed with **[F]** and Moods will appear prefixed with **[M]** in the NSPanelManager scenes list.
 
 The NSPanel Manager scenes are easy enough to use. Simply create a scene in the room page and they will be available in
 the "Scenes"-list for the room on all NSPanels.
@@ -195,6 +197,42 @@ An NSPM button entity is controlled by the NSPanel Manager itself. This button e
 - **MQTT Payload** - The MQTT payload to send.
 
 <CenteredImage src="/images/doc/configure_nspm_button.png" alt="Add/Edit button NSPM" figureNumber="15" />
+
+#### Configure Homey lights
+
+When adding/editing a Homey light entity you get multiple options of characteristics of the light.
+
+- **Homey device <Label value="homey"/>** - The Homey device to control.
+- **Name** - The displayed name on the NSPanel and web interface.
+- **Type** - is this light a ceiling or table light (as to how it should be grouped/displayed on main page on NSPanel).
+- **Control mode** - Is this light dimmable or it it simply an on/off light.
+- **Controlled by main page** - If this is marked the light will be included in the displayed data and controlled from the main page of the NSPanel.
+  This can be uncheck to still have a given light controllable from the panel but not be changed when changing values on the main page.
+- **Capabilities** - Can this light handle color temperature and/or color.
+
+<CenteredImage src="/images/doc/select_homey_entity.png" alt="Select Source" figureNumber="16a" />
+
+<CenteredImage src="/images/doc/configure_homey_light.png" alt="Add/Edit light Homey" figureNumber="16b" />
+
+#### Configure Homey switches
+
+When adding/editing a Homey switch entity you simply get to choose the device and the name to use.
+
+- **Homey device <Label value="homey"/>** - The Homey device to control.
+- **Name** - The displayed name on the NSPanel and web interface.
+
+<!-- TODO: Add Homey switch configuration screenshot when available -->
+<!-- <CenteredImage src="/images/doc/configure_homey_switch.png" alt="Add/Edit switch Homey" figureNumber="16b" /> -->
+
+#### Configure Homey buttons
+
+When adding/editing a Homey button entity you can control devices with on/off capability.
+
+- **Homey device <Label value="homey"/>** - The Homey device with on/off capability.
+- **Name** - The displayed name on the NSPanel and web interface.
+
+<!-- TODO: Add Homey button configuration screenshot when available -->
+<!-- <CenteredImage src="/images/doc/configure_homey_button.png" alt="Add/Edit button Homey" figureNumber="16c" /> -->
 
 ### Switch
 
@@ -328,6 +366,15 @@ The following options are available:
 - **OpenHAB address** - The address used to connect to OpenHAB.
   This should include "http://" or "https://" in the beginning and port are the end.
 - **Access token** - The access token used to authenticate to OpenHAB.
+
+### Homey API
+
+- **Homey address** - The IP address or local mDNS name of your Homey instance (e.g., 192.168.1.100 or homey.local).
+- **Access token** - The API key used to authenticate to Homey. To obtain an API key, follow [Homey's API key guide](https://support.homey.app/hc/en-us/articles/8178797067292-Getting-started-with-API-Keys).
+
+:::info
+A dedicated Homey Add-on will be available in the future on the Homey App Store.
+:::
 
 ## Upload
 
