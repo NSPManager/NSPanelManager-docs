@@ -3,8 +3,9 @@ title: Architecture
 sidebar_position: 7
 ---
 
-import Centered from '@site/src/components/Centered';
 import Label from '@site/src/components/Label';
+import Centered from '@site/src/components/Centered';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 # Architecture
 
@@ -26,24 +27,30 @@ There are 3 software components written for the NSPanel Manager project:
 
 ## Data flow
 
-<Centered>
-```mermaid
-flowchart TD
-    HAS(Home Assistant/OpenHAB)
-    NSPM(NSPanel Manager container)
-    MQTT(MQTT Server)
-    NSP1(NSPanel 1)
-    NSP2(NSPanel 2)
-    HAS <--> NSPM
-    NSPM <--> NSP1
-    NSPM <--> NSP2
-    MQTT <--> HAS
-    MQTT <--> NSPM
-    MQTT <--> NSP1
-    MQTT <--> NSP2
-```
-</Centered>
 
+<Centered>
+  <BrowserOnly fallback={<div>Loading diagram...</div>}>
+    {() => (
+      <div className="mermaid">
+        {`
+        flowchart TD
+            HAS(Home Assistant/OpenHAB)
+            NSPM(NSPanel Manager container)
+            MQTT(MQTT Server)
+            NSP1(NSPanel 1)
+            NSP2(NSPanel 2)
+            HAS <--> NSPM
+            NSPM <--> NSP1
+            NSPM <--> NSP2
+            MQTT <--> HAS
+            MQTT <--> NSPM
+            MQTT <--> NSP1
+            MQTT <--> NSP2
+        `}
+      </div>
+    )}
+  </BrowserOnly>
+</Centered>
 The data flow within NSPanel Manager might look intimidating but it’s not that bad. Below is an explanation of all the
 arrows above.
 
