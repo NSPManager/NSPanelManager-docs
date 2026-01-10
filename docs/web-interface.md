@@ -185,7 +185,7 @@ When adding/editing a Home Assistant button entity you simply get the choice of 
 
 <CenteredImage src="/images/doc/configure_home_assistant_button.png" alt="Add/Edit button Home Assistant" figureNumber="14" />
 
-#### Configure thermostat/climate control
+#### Configure thermostat/climate control <Label value="beta"/>
 
 When adding/editing a thermostat/climate entity you get multiple options of charecteristics of the entity.
 
