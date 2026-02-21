@@ -187,7 +187,7 @@ When adding/editing a Home Assistant button entity you simply get the choice of 
 
 #### Configure thermostat/climate control <Label value="beta"/>
 
-When adding/editing a thermostat/climate entity you get multiple options of charecteristics of the entity.
+When adding/editing a thermostat/climate entity you get multiple options of characteristics of the entity.
 
 - **Name** - The displayed name on the NSPanel and web interface.
 - **Home Assistant Entity <Label value="home_assistant"/>** - The home assistant entity to control.
