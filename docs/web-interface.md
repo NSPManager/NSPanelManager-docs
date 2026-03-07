@@ -66,8 +66,7 @@ Available options for each individual NSPanel are:
   All actions meant for relay 1 will be applied to relay 2 and vice versa.
 - **Left/Right Button mode** - Change the mode of a button. Available options are:
   - **Direct mode** - The buttons controls the relay directly. No WiFi is needed.
-  - **Detached mode** - Detached mode controls a light via your selected home automation platform.
-    This also exposes the option "Left/Right button controls light in room" as well as "Left/Right button controls light" where you select which entity it controls.
+  - **Detached mode** - Detached mode controls an entity via your selected home automation platform. Do not however that not all entity types support the toggle mechanism.
   - **Custom MQTT** - This mode can be used to send a custom message on a custom MQTT topic.
   - **Follow mode** - When the button is pressed the relay is engaged, when the button is release the relay is disconnected.
 - **Relay 1/2 default mode** - Select the default mode of the relay when the NSPanel starts.
@@ -154,7 +153,7 @@ In the last step you can configure settings such as display name and any setting
 When adding/editing a light entity you get multiple options of charecteristics of the light.
 
 - **Name** - The displayed name on the NSPanel and web interface.
-- **Home Assistant Entity <Label value="home_assistant"/>** - The displayed name on the NSPanel and web interface.
+- **Home Assistant Entity <Label value="home_assistant"/>** - The home assistant entity to control.
 - **Type** - is this light a ceiling or table light (as to how it should be grouped/displayed on main page on NSPanel).
 - **Control mode** - Is this light dimmable or it it simply an on/off light.
 - **Controlled by main page** - If this is marked the light will be included in the displayed data and controlled from the main page of the NSPanel.
@@ -186,7 +185,34 @@ When adding/editing a Home Assistant button entity you simply get the choice of 
 
 <CenteredImage src="/images/doc/configure_home_assistant_button.png" alt="Add/Edit button Home Assistant" figureNumber="14" />
 
-#### Configure NSPM buttons
+#### Configure thermostat/climate control <Label value="beta"/>
+
+When adding/editing a thermostat/climate entity you get multiple options of characteristics of the entity.
+
+- **Name** - The displayed name on the NSPanel and web interface.
+- **Home Assistant Entity <Label value="home_assistant"/>** - The home assistant entity to control.
+- **Load options from selected Home Assistant entity <Label value="home_assistant"/>** - This button will load all available options from the selected Home Assistant entity and populate the fields below.
+- **Temperature item <Label value="openhab"/>** - The item in OpenHAB that controls the target temperature.
+- **Step size <Label value="openhab"/>** - When adjusting the temperature, step the temperature by this value.
+
+Following those settings there will be groups of items/settings to adjust. These are the following:
+
+- Fan mode
+- Mode
+- Presets
+- Swing
+- Horizontal swing
+
+Each of these groups have, in case of running <Label value="openhab"/>, a field for selecting the OpenHAB item that controls it.
+There is also a table of settings for each group. This table is built so that the user may choose a different display name and
+icon for each value. The left most field is the value that will be sent to Home Assistant or OpenHAB, the next field is the
+display name that will be shown on the NSPanel, and the rightmost field is the icon that will be shown on the NSPanel. To change the icon
+press the button and select the icon from the list.
+
+<CenteredImage src="/images/doc/configure_home_assistant_thermostat.png" alt="Add/Edit thermostat Home Assistant" figureNumber="12a" />
+<CenteredImage src="/images/doc/configure_openhab_thermostat.png" alt="Add/Edit thermostat OpenHAB" figureNumber="12b" />
+
+#### Configure NSPM (MQTT) buttons
 
 An NSPM button entity is controlled by the NSPanel Manager itself. This button entity is simply used to send an MQTT payload to a specified topic. What you do with it is up to you.
 
