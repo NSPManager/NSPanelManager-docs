@@ -53,5 +53,13 @@ The following is a walkthrough of what to enter:
     the beginning and ":8123" (change to your port) at the end.
   - **OpenHAB token** - The access token used to authenticate to OpenHAB.
 
+- **Homey (optional)**
+  - **Homey address** - The IP address or local mDNS name of your Homey instance (e.g., 192.168.1.100 or homey.local)
+  - **Homey token** - The API key used to authenticate to Homey. To obtain an API key, follow [Homey's API key guide](https://support.homey.app/hc/en-us/articles/8178797067292-Getting-started-with-API-Keys).
+
+:::info
+A dedicated Homey Add-on will be available in the future on the Homey App Store.
+:::
+
 3. Congrats you have finished the initial setup and you can now use NSPanel Manager.
 4. If you are willing to learn more about the Web interface, please read [this](./../web-interface).
