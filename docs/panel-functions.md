@@ -115,3 +115,9 @@ To control a device individually press the device name.
 
 All the capabilities of the chosen light will be shown on this page. If the light is RGB capable there will be an icon
 in the top right corner to toggle between Color Temperature mode and Color mode.
+
+### Thermostat control page
+
+All the capabilities of the chosen thermostat/climate entity will be shown on this page. Simple press the setting you want to change and use the arrows to change it.
+Wait for the timeout or press the next option to apply the changes. The current temperature for the room will be shown using the temperature sensor attached to the room if one exists.
+If no such sensor is attached to the room the thermostat is placed in the current temperature reading will be read from the internal thermistor.
