@@ -47,5 +47,6 @@
   "engines": {
     "node": ">=18.0"
   },
-  "license": "LGPL-3.0-or-later"
+  "license": "LGPL-3.0-or-later",
+  "packageManager": "yarn@4.17.1"
 }
