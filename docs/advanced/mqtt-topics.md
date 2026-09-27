@@ -26,6 +26,7 @@ Below table is a description of all MQTT topics that might be of use by a user. 
 | nspanel/\<mac\>/screensaver_mode_cmd         | screensaver mode    | Select what screensaver to display <br/> Choose from the following: <br/>- with_background<br/>-without_background<br/>-datetime_with_background<br/>-datetime_without_background<br/>or no_screensaver |
 | nspanel/\<mac\>/screensaver_mode_state       | screensaver mode    | The currently selected screensaver mode                                                                                                                                                                 |
 | nspanel/\<mac\>/log                          | Log message         | The panel will send live logs on this topic.                                                                                                                                                            |
+| nspanel/\<mac\>/buzzer_raw_command           | Buzzer raw command  | The raw command to control the buzzer.                                                                                                                                                                  |
 
 Below are more topics that are used internally. Replace `<manager_address>` with the IP address of the manager container.
 
