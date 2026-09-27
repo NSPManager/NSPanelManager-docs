@@ -2,6 +2,7 @@
 title: Flash Sonoff NSPanel
 sidebar_position: 4
 ---
+
 import YouTubePlayer from '@site/src/components/YoutubePlayer';
 import CenteredImage from '@site/src/components/CenteredImage';
 import Tabs from '@theme/Tabs';
@@ -33,7 +34,7 @@ It has to be oriented so you can read the text naturally. Doing it this way redu
 1. Place flat screw driver behind this little metal part and lift it up
 2. Same as previously
 
-Do it softly until you are able to separate the Power block from the rest of the NSPanel. 
+Do it softly until you are able to separate the Power block from the rest of the NSPanel.
 
 You should end up with two parts:
 
@@ -47,8 +48,8 @@ You should end up with two parts:
 2. Unscrew it with a cross screwdriver
 3. After that you can detach the plastic cover from the PCB
 
-
 #### Now you have two choices, the Lazy way or the Complicated way:
+
 **1. Lazy way:**
 
 You can flash straight away without detaching the screen from the PCB and remove PCB completely from housing.
@@ -73,7 +74,7 @@ The black part of the FFC cable do not contains any electronic nor conductive fe
 
 #### Prepare for flashing
 
-In order to get the ESP32 enter in flash mode, `GPIO0`, noted `IO0` on the PCB has to be connected to `GND`. 
+In order to get the ESP32 enter in flash mode, `GPIO0`, noted `IO0` on the PCB has to be connected to `GND`.
 Either connect a cable between `IO0` and `GND` (2) as in picture below:
 <CenteredImage src="/images/doc/flash/step4.png" alt="The PCB connected to the screen via FFC cable" figureNumber="6" />
 
@@ -90,11 +91,11 @@ Make sure to use the 3v3 (not 5V), this can generally be configured with a Jumpe
 1. Connect the USB to UART convert to the PCB:
 
 | USB-UART PIN | NSPanel PCB PIN                         |
-|--------------|-----------------------------------------|
-| VCC          | VCC (Symbolized by a square on the PCB) |   
-| RX           | TX                                      |   
-| TX           | RX                                      |  
-| GND          | GND                                     |  
+| ------------ | --------------------------------------- |
+| VCC          | VCC (Symbolized by a square on the PCB) |
+| RX           | TX                                      |
+| TX           | RX                                      |
+| GND          | GND                                     |
 
 :::info
 Notice that RX and TX pins have to be inverted between the devices: it is not TX -> TX, RX -> RX (See upper table).
@@ -102,12 +103,12 @@ Notice that RX and TX pins have to be inverted between the devices: it is not TX
 
 ### Flash NSPanel with NSPanelManager custom firmware
 
-First, download the latest firmware `merged-flash.bin`, either [stable](https://github.com/NSPManager/NSPanelManager/raw/refs/heads/main/docker/web/nspanelmanager/merged_flash.bin) or [beta](https://github.com/NSPManager/NSPanelManager/raw/refs/heads/beta/docker/web/nspanelmanager/firmware/sonoff/merged_flash.bin).
+First, download the latest firmware `merged-flash.bin`, either [stable](https://github.com/NSPManager/NSPanelManager/raw/refs/heads/main/docker/web/nspanelmanager/firmware/sonoff/merged_flash.bin) or [beta](https://github.com/NSPManager/NSPanelManager/raw/refs/heads/beta/docker/web/nspanelmanager/firmware/sonoff/merged_flash.bin).
 
 Then, flash the firmware with your tool of choice:
 
 <Tabs groupId="flashing-tool" queryString>
-    
+
     <TabItem value="ESPHOMEWEB" label="ESP Home Web (Chrome or Edge)">
       1. Go to https://web.esphome.io/ (not supported in Firefox)
       2. Connect USB to TTL to computer
@@ -117,13 +118,13 @@ Then, flash the firmware with your tool of choice:
       5. Choose .bin file to flash
       6. Press Install
       7. Wait for flashing to complete
-      
+
       <CenteredImage src="/images/doc/flash/esphomeweb.jpg"/>
-      
-    </TabItem>  
-    
+
+    </TabItem>
+
     <TabItem value="Espressif" label="Espressif tool (Windows)">
-    
+
         1. Download Espressif tool from here: https://www.espressif.com/en/support/download/other-tools
         2. Open the tool and choose to flash an `ESP32 chip`.
         3. Click on the `...` button and select the firmware you downloaded at step 1 called `merged-flash.bin`.
@@ -142,11 +143,11 @@ Then, flash the firmware with your tool of choice:
            This will do a check and see if the tool can communicate with the NSPanel.
         4. Run `esptool.py --baud 921600 --port /dev/ttyUSB0 write_flash 0x0 merged_flash.bin`.
            You will have to replace `/dev/ttyUSB0` with the actual port connected to the NSPanel.
-        
+
         :::info
         On Windows it might be just `esptool` without the `.py` at the end.
         :::
-        
+
         :::info
         On Windows `/dev/ttyUSB0` will have to be replaced by something like `COM4`. If using MacOS or Linux the
         port will be something similar to `/dev/ttyUSB0`.
@@ -160,7 +161,3 @@ After the flash of the firmware, you will not see any visible change on the NSPa
 :::
 
 You are now ready to (configure your flashed Sonoff NSPanel)[./configure-flashed-nspanel.md].
-
-
-
-
