@@ -24,8 +24,7 @@ After flashing your NSPanel:
 1. Connect it to power
 2. It will boot as an access point.
 3. Check for a WIFI network called `NSPMPanel-XXXXXX` where XXXXXX is unique to each panel.
-4. Connect to it (no password required)
-5. Visit http://192.168.4.1
+4. Connect to it (no password required). The web page to configure the panel will open automatically. If it does not, visit http://192.168.4.1 manually.
 
 You should see a page similar to this:
 
@@ -42,10 +41,14 @@ Let's setup the minimal configuration, the rest can be configured from NSPanel M
 After that the device will reboot and connect to your Wifi
 (it will no longer host a WiFi named `NSPMPanel` nor be reachable to the previous url).
 
-In case you need to access the setup page again it is possible to reset the device by pressing the reset/reboot button via the bottom hole quickly 5 times in a row. This will start the WiFi access point again and let you configure it.
+If something went wrong when entering the WiFi connection details and the NSPanel cannot connect to your WiFi, do the following the access to configuration page again.
+
+<Label value="STABLE"/> Reset the device by pressing the reset/reboot button via the bottom hole quickly 5 times in a row. This will start the WiFi access point again and let you configure it.
+
+<Label value="BETA"/> Restart the NSPanel and wait for 1 minute. The WiFi access point should be available again.
 
 If needed, you will still be able to connect to it via it's new IP from your own Wifi network
-(check in your router to retrieve its new IP).
+(check in your router to retrieve its new IP). Once the NSPanel has been accepted into the manager you will be able to easily access it from the manager interface.
 
 At this stage, if your device could connect to your WiFi and to MQTT you can jump into
 the [installation of NSPanel Manager](./install/installation-guide-docker.md)

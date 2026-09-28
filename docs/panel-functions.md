@@ -4,6 +4,7 @@ sidebar_position: 4
 ---
 
 import CenteredImage from '@site/src/components/CenteredImage';
+import Label from '@site/src/components/Label';
 
 # Panel functions
 
@@ -121,3 +122,11 @@ in the top right corner to toggle between Color Temperature mode and Color mode.
 All the capabilities of the chosen thermostat/climate entity will be shown on this page. Simple press the setting you want to change and use the arrows to change it.
 Wait for the timeout or press the next option to apply the changes. The current temperature for the room will be shown using the temperature sensor attached to the room if one exists.
 If no such sensor is attached to the room the thermostat is placed in the current temperature reading will be read from the internal thermistor.
+
+## <Label value="BETA"/> Buzzer
+
+The buzzer in the NSPanel can be used play sounds. Send your command to the `nspanel/<mac>/buzzer_raw_command` MQTT topic. Replace `<mac>` with the MAC address of your NSPanel. Here is an example command:
+
+```
+mosquitto_pub -h 10.2.0.4 -t nspanel/48:E7:29:C3:3D:B0/buzzer_raw_command -m 'mario:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g'
+```
