@@ -3260,15 +3260,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mermaid-js/parser@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@mermaid-js/parser@npm:1.2.0"
-  dependencies:
-    "@chevrotain/types": "npm:~11.1.2"
-  checksum: 10c0/907d41167b23160c88f292b0dd79162d2543445ecf1d784ed09747467705666669f818e3ab91e1182da2127720fb40cb707e6fd56e8a445020fd3e7b8b16f013
-  languageName: node
-  linkType: hard
-
 "@mermaid-js/parser@npm:^2.0.0":
   version: 2.0.0
   resolution: "@mermaid-js/parser@npm:2.0.0"
@@ -6179,7 +6170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cytoscape@npm:^3.33.3, cytoscape@npm:^3.34.0":
+"cytoscape@npm:^3.34.0":
   version: 3.34.3
   resolution: "cytoscape@npm:3.34.3"
   checksum: 10c0/953ef85160d4a5b1a7e47af4039e66b81d4e6d00b39d6e1f4387c4563cdc4cb4480e91e8f7f6b5fbda05bf3d8019792b514a809ed1e4d1c2a5b16827b4c4a315
@@ -6549,7 +6540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.20, dayjs@npm:^1.11.21":
+"dayjs@npm:^1.11.21":
   version: 1.11.23
   resolution: "dayjs@npm:1.11.23"
   checksum: 10c0/69ab04bf19c676e44ab50cc2fca223d265f3dafd107151ef3b0f3ad74d360c37caa602abe62f87cb25d90bd9f6bee003698af47df5b0dbf10a998b7b5f3bb3f1
@@ -6772,7 +6763,7 @@ __metadata:
     "@docusaurus/types": "npm:^3.9.2"
     "@mdx-js/react": "npm:^3.1.1"
     clsx: "npm:^2.1.1"
-    mermaid: "npm:11.16.0"
+    mermaid: "npm:12.0.0"
     prism-react-renderer: "npm:^2.4.1"
     react: "npm:^19.2.1"
     react-dom: "npm:^19.2.1"
@@ -6836,7 +6827,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:^3.3.3, dompurify@npm:^3.4.12":
+"dompurify@npm:^3.4.12":
   version: 3.4.16
   resolution: "dompurify@npm:3.4.16"
   dependencies:
@@ -8733,7 +8724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:^0.16.45, katex@npm:^0.16.47":
+"katex@npm:^0.16.47":
   version: 0.16.47
   resolution: "katex@npm:0.16.47"
   dependencies:
@@ -9283,36 +9274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mermaid@npm:11.16.0":
-  version: 11.16.0
-  resolution: "mermaid@npm:11.16.0"
-  dependencies:
-    "@braintree/sanitize-url": "npm:^7.1.2"
-    "@iconify/utils": "npm:^3.0.2"
-    "@mermaid-js/parser": "npm:^1.2.0"
-    "@types/d3": "npm:^7.4.3"
-    "@upsetjs/venn.js": "npm:^2.0.0"
-    cytoscape: "npm:^3.33.3"
-    cytoscape-cose-bilkent: "npm:^4.1.0"
-    cytoscape-fcose: "npm:^2.2.0"
-    d3: "npm:^7.9.0"
-    d3-sankey: "npm:^0.12.3"
-    dagre-d3-es: "npm:7.0.14"
-    dayjs: "npm:^1.11.20"
-    dompurify: "npm:^3.3.3"
-    es-toolkit: "npm:^1.45.1"
-    katex: "npm:^0.16.45"
-    khroma: "npm:^2.1.0"
-    marked: "npm:^16.3.0"
-    roughjs: "npm:^4.6.6"
-    stylis: "npm:^4.3.6"
-    ts-dedent: "npm:^2.2.0"
-    uuid: "npm:^11.1.0 || ^12 || ^13 || ^14.0.0"
-  checksum: 10c0/a14f9bc9db7f1dea65b0d6c0b920236d12ad2812f2a1b11c8b39b3dfb3c22bfce39c77f6a69493203b85880d8008d345c539efe7ae6a31d3dad512833ccfb517
-  languageName: node
-  linkType: hard
-
-"mermaid@npm:>=11.6.0":
+"mermaid@npm:12.0.0, mermaid@npm:>=11.6.0":
   version: 12.0.0
   resolution: "mermaid@npm:12.0.0"
   dependencies:
