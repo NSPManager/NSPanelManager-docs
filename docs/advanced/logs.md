@@ -6,8 +6,23 @@ import CenteredImage from '@site/src/components/CenteredImage';
 
 # Logs
 
-While logs are normally sent over MQTT, any logs that are created before WiFi-connection are sent out on Serial. 
-If you wish to see the logs going over MQTT, you can look at the topic `nspanel/<panel name>/log`. 
+Once the NSPanel is connected to MQTT, it sends its logs on the topic `nspanel/<mac>/log`, where `<mac>` is the MAC address of the panel.
+These are the logs you see in the live log view on the NSPanel page in the web interface, and the log level is set on the
+settings page on the panel itself.
+
+Logs created while the panel isn't connected to MQTT, for example during boot or before WiFi has connected, can't reach the
+manager, so they're written to the serial port instead.
+
+## Serial log setting
+
+The **Serial log** setting on the panel's own settings page controls when log lines are also written to the serial port:
+
+- **Auto (only while not connected to MQTT)** - The default. Lines go to the serial port only while they can't be sent over
+  MQTT. Writing to the serial port slows the panel down, so it is skipped once the logs reach the manager.
+- **Always** - Every line is written to the serial port as well. Useful when debugging with a serial cable attached.
+- **Never** - Nothing is written to the serial port.
+
+## Read the serial log
 
 If you wish to look at the logs going over serial, you can use programs like Putty. 
 
@@ -25,3 +40,9 @@ will be something similar to `/dev/ttyUSB0`.
 Example:
 
 <CenteredImage src="/images/doc/putty_serial.png" alt="Connecting to Serial with Putty" figureNumber={10} />
+
+## Event loop watchdog
+
+If the panel stops responding to touches while it still shows as online in the manager, look for `LoopWatchdog` lines in its
+log. The panel logs these when its main event loop has stalled for 15 seconds or more: one line per task, each with a backtrace.
+They are useful to include in a bug report.

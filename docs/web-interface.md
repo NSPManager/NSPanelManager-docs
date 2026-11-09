@@ -69,6 +69,17 @@ Available options for each individual NSPanel are:
   - **Detached mode** - Detached mode controls an entity via your selected home automation platform. Do not however that not all entity types support the toggle mechanism.
   - **Custom MQTT** - This mode can be used to send a custom message on a custom MQTT topic.
   - **Follow mode** - When the button is pressed the relay is engaged, when the button is release the relay is disconnected.
+  - **Thermostat (heating) mode** - The panel switches the relay itself to keep the temperature between a lower and an
+    upper limit. The relay turns on when the temperature falls to the **Relay 1/2 lower temperature** and turns off when it
+    rises to the **Relay 1/2 upper temperature**.
+  - **Thermostat (cooling) mode** - As above, but the other way round: the relay turns on when the temperature rises to
+    the upper temperature and turns off when it falls to the lower temperature.
+
+  In both thermostat modes the button doesn't control the relay, and the relay starts off when the panel boots.
+  The limits are whole degrees, in the same unit the panel shows (Celsius or Fahrenheit).
+  The panel uses only its own internal temperature sensor, so it doesn't depend on another sensor reporting in.
+  Be aware that the relay can warm the panel and skew the reading, and that a panel that stops responding also stops
+  switching the relay.
 - **Relay 1/2 default mode** - Select the default mode of the relay when the NSPanel starts.
 - **Register relay 1/2** as:
   - **Switch** - The relay will be registered to Home Assistant as a switch entity.
@@ -193,7 +204,7 @@ When adding/editing a thermostat/climate entity you get multiple options of char
 - **Home Assistant Entity <Label value="home_assistant"/>** - The home assistant entity to control.
 - **Load options from selected Home Assistant entity <Label value="home_assistant"/>** - This button will load all available options from the selected Home Assistant entity and populate the fields below.
 - **Temperature item <Label value="openhab"/>** - The item in OpenHAB that controls the target temperature.
-- **Step size <Label value="openhab"/>** - When adjusting the temperature, step the temperature by this value.
+- **Step size** - When adjusting the temperature, step the temperature by this value. Defaults to 0.5.
 
 Following those settings there will be groups of items/settings to adjust. These are the following:
 
@@ -225,6 +236,12 @@ An NSPM button entity is controlled by the NSPanel Manager itself. This button e
 ### Switch
 
 It's possible to add relays/switches as controlled entities from the NSPanel. These are simply on/off and can be toggled from the "Entities page" on the NSPanel.
+
+### Delete a room
+
+Press **Delete** on the room page and confirm. The room's entities, scenes and pages are deleted with it, and any panels
+in the room are moved to another room.
+The last room can't be deleted while panels are assigned to it. Create another room or remove the panels first.
 
 ## Relay groups
 
@@ -304,8 +321,12 @@ The following options are available:
 - **Maximum color temperature** - The maximum kelvin to send to Home Assistant/OpenHAB.
 - **Reverse color temperature slider** - Reverse the color temperature sliders on the NSPanel used to control color
   temperature on lights.
-- **Turn on behavior** - Wether to send color temperature when turning on the light or to simply send the "turn on"
-  command.
+- **Turn on behavior** - What to send when the NSPanel turns on a light that is off:
+  - **Color temperature** - Turn the light on in color temperature mode, at its last known color temperature, even if it
+    was last in color (RGB) mode. Choosing a color on the panel still turns it on in that color. This only applies to
+    lights configured with color temperature support, and only once the light has reported a color temperature.
+    Until then, the light keeps its own last color temperature.
+  - **Restore** - Simply send the "turn on" command, so the light comes back however it was before.
 - **Raise lights to 100% threshold** - The slider on the NSPanel can be finiky to get to reach the maximum value of
   100%. To solve this problem this option can be used to force the value to be 100% above the given value.
 - **Minimum button push time (ms)** - The minimum amout of time (in milliseconds) for the physical buttons to be
@@ -333,6 +354,9 @@ The following options are available:
 - **MQTT ignore time (ms)** - Time to wait (in milliseconds) after sending a command over MQTT before allowing
   new values to update the screen. This can be raised or lowered to minimize flickering of sliders on the NSPanel.
 - **Optistmic mode ** - Replaces "MQTT Ignore time (ms)". When sending a command to set the state of a light or other entity, should we wait for a callback from Home Assistant or OpenHAB that a light has changed before updating the value on the NSPanel (Wait mode) or should we simply be optistmic and assume the values we sent will be set and immideatly update the displayed values on the NSPanel (optistmic mode).
+- **Room status backoff time (ms)** - When an entity in a room changes state, how long the manager waits for other changes
+  to settle before sending the room's new state to the NSPanels (in milliseconds). This avoids flickering when several
+  lights change at once.
 - **"All rooms" status backoff time (ms)** - When a room changes state, how long should the manager wait before recalculating the new state for "All rooms" view/mode on the NSPanel (in milliseconds).
 - **"Default light turn on brightess** - When a light has a brightness of 0 and the manager tries to turn it on it will default to this value.
 
